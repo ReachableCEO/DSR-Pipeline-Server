@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 secrets_manager()
 {
 
@@ -34,25 +35,6 @@ export BW_SESSION="$(bw unlock --passwordenv TSYS_BW_PASSWORD_REACHABLECEO --raw
 
 export DISCOURSE_APIKEY="$(bw get password APIKEY-discourse)"
 
-}
-
-generate_dsr()
-{
-
-echo "Creating PDF of DSR from markdown input via pandoc..."
-
-INPUT_FILE="./DSR-$(date +%m-%d-%Y).md"
-OUTPUT_FILE="./DSR-$(date +%m-%d-%Y).pdf"
-METADATA_FILE="daily-stakeholder-report.yml"
-TEMPLATE="eisvogel"
-
-pandoc \
-$INPUT_FILE \
---template $TEMPLATE \
---metadata-file=$METADATA_FILE \
---from markdown \
---to=pdf \
---output $OUTPUT_FILE
 }
 
 post_dsr()
@@ -136,14 +118,7 @@ else
   echo "$post_response"
   exit 1
 fi
-
-
-
-
 }
-
-#Create PDF from joplin exported markdown
-generate_dsr
 
 #Get discourse api key
 secrets_manager 
