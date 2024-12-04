@@ -1,22 +1,48 @@
 # DailyStakeholderReport-Pipeline
 
+- [DailyStakeholderReport-Pipeline](#dailystakeholderreport-pipeline)
+  - [Introduction](#introduction)
+  - [Scripts](#scripts)
+    - [Start a new day](#start-a-new-day)
+      - [Create a new (blank) DSR](#create-a-new-blank-dsr)
+      - [Populate the new DSR with objectives for the day](#populate-the-new-dsr-with-objectives-for-the-day)
+    - [End the day](#end-the-day)
+      - [Collating and Publishing the report](#collating-and-publishing-the-report)
+      - [Gathering data for the report](#gathering-data-for-the-report)
+
 ## Introduction
 
 I publish a daily stakeholder report to the TSYS Group discourse every day. Up until 11/29 I was performing the publishing step manually.
 On 11/29 I automated the process. I also begin work on automated gathering of data going into the new version of the report.
 
-These scripts help me maintain a daily report and high fidelity information in the report for my stakeholderrs.
+These scripts help me maintain a daily report and high fidelity information in the report for my stake holders.
 
 ## Scripts
 
-### Publishing the report
+### Start a new day
+
+Start a new day. See the script: **endstops/start-day.sh**
+
+#### Create a new (blank) DSR
+
+See the script: **dsr-joplin-create/dsr-new.sh**
+
+#### Populate the new DSR with objectives for the day
+
+See the script: **dsr-joplin-create/dsr-populate-objectives.sh**
+
+### End the day
+
+End the day. See the script: **endstops/end-day.sh**
+
+#### Collating and Publishing the report
 
 Publishing the report involves three steps:
 
-1. Exporting the markdown from Joplin (and attachments) I am currently doing this manually (but see export-joplin-note for a chatgpt take on automating it.).
-2. Creating a (formatted/styled) PDF from the exported markdown/attachments. See the script: **create-dsr.sh**.
-3. Uploading the PDF to discourse and creating a new topic in the appropriate category. See the script: **publish-dsr.sh**
+1. Exporting the markdown from Joplin (and any attachments (i often take screenshots throughout the day)) I am still doing this manually due to having issues installing the Joplin CLI.
 
-### Data Gathering
+2. Creating a (formatted/styled) PDF from the exported markdown/attachments. See the script: **dsr-publish/create-dsr-pdf.sh**.
 
-I am trying to fully instrument my CTO/founder life. See the **data-gathering** sub directory (and README located therein) for WIP on that.
+3. Uploading the PDF to discourse and creating a new topic in the appropriate category. See the script: **dsr-publish/publish-dsr.sh**
+
+#### Gathering data for the report
