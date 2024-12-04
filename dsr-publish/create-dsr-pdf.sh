@@ -1,9 +1,8 @@
 #!/bin/bash
 
-echo "Creating PDF of DSR from markdown input via pandoc..."
-
-INPUT_FILE="./DSR-$(date +%m-%d-%Y).md"
-OUTPUT_FILE="./DSR-$(date +%m-%d-%Y).pdf"
+TODAY_DATE=$(date +%m-%d-%Y)
+INPUT_FILE="./DSR-$TODAY_DATE.md"
+OUTPUT_FILE="./DSR-$TODAY_DATE.pdf"
 METADATA_FILE="daily-stakeholder-report.yml"
 TEMPLATE="eisvogel"
 

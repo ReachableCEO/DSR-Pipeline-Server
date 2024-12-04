@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 secrets_manager()
 {
 
@@ -42,9 +41,6 @@ post_dsr()
 {
 echo "Posting DSR..."
 
-#!/bin/bash
-
-# Replace these with your Discourse instance details
 DISCOURSE_URL="https://community.turnsys.com"  # e.g., https://forum.example.com
 API_KEY="$DISCOURSE_APIKEY" # Your API key
 API_USERNAME="reachableceo" # API username or admin account
@@ -53,13 +49,13 @@ API_USERNAME="reachableceo" # API username or admin account
 CATEGORY_ID=61
 
 # The title for the post (generated here; customize as needed)
-TITLE="Daily Stakeholder Report - $(date +'%m-%d-%Y')"
+TITLE="Daily Stakeholder Report - $TODAY_DATE"
 
 # The content of the post
-CONTENT="Please see the attached PDF for today's report."
+CONTENT="Please use the link below to download today's stakeholder report."
 
 # The file to upload (from the second argument or auto-generated based on date)
-FILE_PATH="./DSR-"$(date +%m-%d-%Y)".pdf"
+FILE_PATH="./DSR-$TODAY_DATE.pdf"
 
 # Check if the file exists
 if [ ! -f "$FILE_PATH" ]; then
@@ -91,7 +87,7 @@ fi
 echo "File uploaded successfully. Short URL: $short_url"
 
 # Append the file link to the post content (Markdown format)
-CONTENT="$CONTENT\n\n[Download the PDF]($short_url)"
+CONTENT="$CONTENT\n\n[Download todays report in PDF format]($short_url)"
 
 # Create the new topic
 echo "Creating new topic..."
@@ -118,10 +114,15 @@ else
   echo "$post_response"
   exit 1
 fi
+
 }
 
 #Get discourse api key
+
 secrets_manager 
 
-#Create a new topic and upload/attach PDF to the topic
+# - Create a new topic 
+# - upload PDF to discourse
+# - attach uploaded PDF to the topic
+
 post_dsr
