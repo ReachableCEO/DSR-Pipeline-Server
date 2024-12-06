@@ -1,4 +1,4 @@
-title: Daily Stakeholder Report - \date
+title: Daily Stakeholder Report - \today
 titlepage: true
 header-left: "\\hspace{1cm}"
 header-center: "\\leftmark"
