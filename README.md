@@ -12,10 +12,9 @@
 
 ## Introduction
 
-I publish a daily stakeholder report to the TSYS Group discourse every day. Up until 11/29 I was performing the publishing step manually.
-On 11/29 I automated the process. I also begin work on automated gathering of data going into the new version of the report.
+I publish a daily stakeholder report to the TSYS Group discourse every day. Up until 11/29 I was performing the publishing step manually. On 11/29 I automated the pdf creation and publishing to discourse procedure.
 
-These scripts help me maintain a daily report and high fidelity information in the report for my stake holders.
+I also begin work on automated gathering of data going into the new version of the report that is in development.
 
 ## Scripts
 

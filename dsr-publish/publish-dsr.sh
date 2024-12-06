@@ -39,6 +39,9 @@ export DISCOURSE_APIKEY="$(bw get password APIKEY-discourse)"
 post_dsr()
 
 {
+
+TODAY_DATE=$(date +%m-%d-%Y)
+
 echo "Posting DSR..."
 
 DISCOURSE_URL="https://community.turnsys.com"  # e.g., https://forum.example.com
@@ -55,7 +58,7 @@ TITLE="Daily Stakeholder Report - $TODAY_DATE"
 CONTENT="Please use the link below to download today's stakeholder report."
 
 # The file to upload (from the second argument or auto-generated based on date)
-FILE_PATH="./DSR-$TODAY_DATE.pdf"
+FILE_PATH="../dsrtemp/DSR-$TODAY_DATE.pdf"
 
 # Check if the file exists
 if [ ! -f "$FILE_PATH" ]; then
