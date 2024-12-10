@@ -40,7 +40,8 @@ post_dsr()
 
 {
 
-TODAY_DATE=$(date +%m-%d-%Y)
+#TODAY_DATE=$(date +%m-%d-%Y)
+TODAY_DATE="12-09-2024"
 
 echo "Posting DSR..."
 
@@ -58,7 +59,7 @@ TITLE="Daily Stakeholder Report - $TODAY_DATE"
 CONTENT="Please use the link below to download today's stakeholder report."
 
 # The file to upload (from the second argument or auto-generated based on date)
-FILE_PATH="../dsrtemp/DSR-$TODAY_DATE.pdf"
+FILE_PATH="../dsr-build-output/DSR-$TODAY_DATE.pdf"
 
 # Check if the file exists
 if [ ! -f "$FILE_PATH" ]; then
