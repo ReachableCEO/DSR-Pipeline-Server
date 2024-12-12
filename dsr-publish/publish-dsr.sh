@@ -41,7 +41,7 @@ post_dsr()
 {
 
 #TODAY_DATE=$(date +%m-%d-%Y)
-TODAY_DATE="12-09-2024"
+TODAY_DATE=12-10-2024
 
 echo "Posting DSR..."
 

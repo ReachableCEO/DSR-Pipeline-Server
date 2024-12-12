@@ -1,4 +1,5 @@
-title: Daily Stakeholder Report - \today
+#title: Daily Stakeholder Report - \today
+title: Daily Stakeholder Report - 12-10-2024
 titlepage: true
 header-left: "\\hspace{1cm}"
 header-center: "\\leftmark"
@@ -6,5 +7,5 @@ header-right: "Page \\thepage"
 footer-left: "Charles N Wyble"
 footer-center: "Tenacity. Velocity. Focus."
 footer-right: "[Source code](https://git.knownelement.com/reachableceo/DailyStakeholderReport-Pipeline/src/branch/main/dsr-publish/create-dsr-pdf.sh)"
-page-background: "D:/tsys/@ReachableCEO/ExternalVendorCode/pandoc-latex-template/examples/page-background/backgrounds/background5.pdf"
+page-background: "D:/tsys/@ReachableCEO/DailyStakeholderReport-Pipeline/dsr-publish/background5.pdf"
 titlepage-logo: "D:/tsys/@ReachableCEO/ReachableCEO.png"
