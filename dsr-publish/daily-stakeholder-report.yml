@@ -1,5 +1,5 @@
-#title: Daily Stakeholder Report - \today
-title: Daily Stakeholder Report - 12-10-2024
+title: Daily Stakeholder Report - \today
+urlcolor: blue
 titlepage: true
 header-left: "\\hspace{1cm}"
 header-center: "\\leftmark"
