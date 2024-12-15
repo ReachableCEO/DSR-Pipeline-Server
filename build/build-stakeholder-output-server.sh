@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Expand variables into rendered YAML files. These will be used by pandoc to format the output artifacts
-$MO_PATH $PipelineClientWorkingDir/build/BuildTemplate-StakeholderOutput.yml > $BUILDYAML_STAKEHOLDER_OUTPUT
+$MO_PATH $YamlInputTemplateFileStakeholderOutput > $BUILDYAML_STAKEHOLDER_OUTPUT
 
 echo "Creating stakeholder report..."
 
